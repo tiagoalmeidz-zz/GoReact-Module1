@@ -1,21 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
-export default class Button extends Component {
-  static defaultProps = {
-    children: "Salvar"
-  };
+const Button = props => (
+  <button onClick={props.onClick}>{props.children}</button>
+);
 
-  static propTypes = {
-    onClick: PropTypes.func.isRequired,
-    children: PropTypes.string
-  };
+Button.defaultProps = {
+  children: "Salvar"
+};
 
-  render() {
-    return (
-      <button onClick={this.props.onClick} style={{ background: "#FFF" }}>
-        {this.props.children}
-      </button>
-    );
-  }
-}
+Button.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  children: PropTypes.string
+};
+
+export default Button;
