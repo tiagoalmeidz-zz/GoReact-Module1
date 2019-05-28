@@ -8,6 +8,14 @@ class App extends Component {
     counter: 0
   };
 
+  componentDidMount() {
+    // Método que inicia automaticamente na inicialização do Componente, Perfeito para fazer chamadas em API's
+  }
+
+  componentWillUnmount() {
+    // Método que inicia quando o componente é destruido. utilizado para limpar todo tipo de evento
+  }
+
   handleClick = () => {
     this.setState({ counter: this.state.counter + 1 });
   };
